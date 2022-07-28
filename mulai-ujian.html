@@ -1,0 +1,225 @@
+<html lang="en">
+<link type="text/css" rel="stylesheet" id="dark-mode-custom-link">
+<link type="text/css" rel="stylesheet" id="dark-mode-general-link">
+<style lang="en" type="text/css" id="dark-mode-custom-style"></style>
+<style lang="en" type="text/css" id="dark-mode-native-style"></style>
+<style lang="en" type="text/css" id="dark-mode-native-sheet"></style>
+
+<head>
+    <meta charset="utf-8">
+    <title>Ujian</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description">
+    <meta content="Coderthemes" name="author">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon3.ico">
+
+    <!-- App css -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/app.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/custom.css" rel="stylesheet" type="text/css">
+
+    <!-- <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script> -->
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+</head>
+
+<body>
+    <div id="wrapper">
+
+        <div class="navbar-custom">
+            <!-- <ul class="list-unstyled topnav-menu float-right mb-0">
+                <li class="dropdown notification-list">
+                    <a href="javascript:void(0);" class="nav-link right-bar-toggle waves-effect waves-light">
+                   Selesai Ujian
+                </a>
+                </li>
+            </ul> -->
+
+            <!-- LOGO -->
+            <div class="logo-box">
+                <a href="#" class="logo text-center">
+                    <!-- <span class="logo-lg">
+                   <img src="assets/images/logo-light-3.png" alt="" height="24"> -->
+                    <span class="logo-lg-text-light">LMS</span>
+                    </span>
+                    <span class="logo-sm">
+                   <!-- <span class="logo-sm-text-dark">U</span> -->
+                    <img src="assets/images/logo-sm.png" alt="" height="28">
+                    </span>
+                </a>
+            </div>
+
+            <ul class="list-unstyled topnav-menu topnav-menu-left m-0">
+                <li class="d-none d-sm-block">
+                    <form class="app-search">
+                        <div class="app-search-box pl-3">
+                            Muh. Fathurrahman - Div. Intern </div>
+                    </form>
+                </li>
+            </ul>
+        </div>
+
+        <div id="ujian" class="content-page">
+            <div class="content">
+
+                <div class="row">
+                    <div class="col-12">
+                        <div id="ujian" class="page-title-box">
+                            <div class="page-title-right">
+                                <ol class="breadcrumb m-0">
+                                    <li class="breadcrumb-item">Uji Kompetensi</li>
+                                    <li class="breadcrumb-item active">Ujian</li>
+                                    <li class="breadcrumb-item active">Mulai Ujian</li>
+                                </ol>
+                            </div>
+                            <h4 class="page-title">Uji Kompetensi</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="ujian" class="container-fluid">
+                    <form onsubmit="return (function(event) { event.preventDefault();  readText()}) (event)">
+                        <fieldset>
+                            <input type="hidden" id="id_ujian" name="id_ujian" value="5">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <h4 class="card-title mb-0 flex-grow-1">Konfirmasi Data</h4>
+                                        </div>
+                                        <div class="card-body">
+                                            <div id="responseDiv" class="alert alert-danger" role="alert" style="display:none;">
+                                                <i class="fe-alert-triangle mr-1"></i><span id="message"></span>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-7">
+                                                    <table class="table table-bordered table-striped mb-0">
+                                                        <tbody>
+                                                            <tr>
+                                                                <th>Nama</th>
+                                                                <td>Muh. Fathurrahman</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>Pengawas</th>
+                                                                <td>Kengkeng</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>Kelas</th>
+                                                                <td>Sistem Informasi A</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th width="250">Nama Ujian</th>
+                                                                <td>
+                                                                    Ujian Kompetensi (Ilmu Komputer)
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>Jumlah Soal</th>
+                                                                <td>4 Soal</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>Waktu Ujian</th>
+                                                                <td>60 Menit</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>Berakhir</th>
+                                                                <td>29 Jul, 2022 | 01:59 </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>Token</th>
+                                                                <td>
+                                                                    <input type="text" class="form-control" id="trcode" name="token" maxlength="6" placeholder="Masukan Token Ujian" required="">
+                                                                    <span id="alert" class="help-block"><small id="alert-text"></small></span>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <div class="col-5">
+                                                    <div class="alert alert-info bg-info text-white border-0" role="alert">
+                                                        Waktu boleh mengerjakan ujian adalah saat tombol "MULAI" berwarna hijau muncul.
+                                                    </div> <br>
+                                                    <button id="submit1" class="btn btn-success waves-effect waves-light mb-3" value="asdasd"><i class="fe-edit-1 mr-1"></i> <span id="cekText" >Mulai</span> </button>
+                                                    <div class="alert alert-danger bg-danger text-white border-0" role="alert">
+                                                        <strong><i class="fe-clock mr-1"></i><span class="countdown" data-time="2022-07-29 01:59:00">00 Hari, 15 Jam, 18 Menit, 36 Detik </span></strong>
+                                                        <br>Batas waktu menekan tombol mulai.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Footer Start -->
+        <footer id="ujian" class="footer mt-4">
+            <div class="container-fluid">
+                <div class="row mb-2">
+                    <div class="col-sm-6">
+                        Friday, 29 July 2022, <span class="live-clock">10:12:22</span>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="text-sm-end d-none d-sm-block">
+                            <script>
+                                document.write(new Date().getFullYear())
+                            </script>2022 © Aplikasi LMS
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- end Footer -->
+
+    </div>
+
+    <!-- Vendor js -->
+    <script src="assets/js/vendor.min.js"></script>
+
+    <!--Form Wizard-->
+    <script src="assets/libs/jquery-steps/jquery.steps.min.js"></script>
+    <!-- Validation init js-->
+    <script src="assets/js/pages/wizard-init.js"></script>
+
+    <!-- App js -->
+    <script src="assets/js/app.min.js"></script>
+
+    <script type="text/javascript">
+        let url = 'http://localhost/ujian/';
+    </script>
+    <!-- <script src="assets/js/app/token.js"></script> -->
+    <script src="assets/js/app/sheet.js"></script>
+    <script src="assets/js/app/wizard.js"></script>
+
+    <script>
+        function readText() {
+            var value1 = document.getElementById("trcode").value;
+            var value2 = document.getElementById("submit1").value;
+            console.log(`value1 = ${value1}`);
+            console.log(`value2 = ${value2}`);
+
+            if (value1 === value2) {
+                console.log(`benar`);
+                alert(`token benar`);
+                location.href = "lembar-ujian.html";
+            } else {
+                console.log(`salah`);
+                alert("token salah");
+            }
+        }
+    </script>
+
+
+
+</body>
+
+</html>

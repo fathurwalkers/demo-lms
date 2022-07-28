@@ -1,0 +1,370 @@
+<html lang="en">
+<link type="text/css" rel="stylesheet" id="dark-mode-custom-link">
+<link type="text/css" rel="stylesheet" id="dark-mode-general-link">
+<style lang="en" type="text/css" id="dark-mode-custom-style"></style>
+<style lang="en" type="text/css" id="dark-mode-native-style"></style>
+<style lang="en" type="text/css" id="dark-mode-native-sheet"></style>
+
+<head>
+    <meta charset="utf-8">
+    <title>Ujian</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description">
+    <meta content="Coderthemes" name="author">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon3.ico">
+
+    <!-- App css -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/app.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/custom.css" rel="stylesheet" type="text/css">
+
+    <!-- <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+    <style>
+        .content-page {
+            margin-left: 240px;
+            overflow: none!important;
+            padding: 0 15px 5px 15px;
+            min-height: 200vh!important;
+            margin-top: auto!important;
+            margin-bottom: auto!important;
+        }
+    </style>
+
+</head>
+
+<body class="enlarged">
+    <div id="wrapper">
+
+        <div class="navbar-custom">
+            <ul class="list-unstyled topnav-menu float-right mb-0">
+                <li class="dropdown notification-list">
+                    <a href="javascript:void(0);" class="nav-link right-bar-toggle waves-effect waves-light">
+                   Selesai Ujian
+                </a>
+                </li>
+            </ul>
+
+            <!-- LOGO -->
+            <div class="logo-box">
+                <a href="#" class="logo text-center">
+                    <!-- <span class="logo-lg">
+                   <img src="assets/images/logo-light-3.png" alt="" height="24"> -->
+                    <span class="logo-lg-text-light">LMS</span>
+                    </span>
+                    <span class="logo-sm">
+                   <!-- <span class="logo-sm-text-dark">U</span> -->
+                    <img src="assets/images/logo-sm.png" alt="" height="28">
+                    </span>
+                </a>
+            </div>
+
+            <ul class="list-unstyled topnav-menu topnav-menu-left m-0">
+                <li class="d-none d-sm-block">
+                    <form class="app-search">
+                        <div class="app-search-box pl-3">
+                            Muh. Fathurrahman - Div. Intern </div>
+                    </form>
+                </li>
+            </ul>
+        </div>
+
+        <div id="ujian" class="content-page">
+            <div class="content">
+
+                <div class="row">
+                    <div class="col-12">
+                        <div id="ujian" class="page-title-box">
+                            <div class="page-title-right">
+                                <ol class="breadcrumb m-0">
+                                    <li class="breadcrumb-item">Uji Kompetensi</li>
+                                    <li class="breadcrumb-item active">Ujian</li>
+                                    <li class="breadcrumb-item active">Mulai Ujian</li>
+                                </ol>
+                            </div>
+                            <h4 class="page-title">Uji Kompetensi</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="ujian" class="container-fluid">
+                    <div id="responseDiv" class="alert text-center" role="alert" style="display:none;">
+                        <span id="message"></span>
+                    </div>
+
+                    <div class="row mb-4">
+                        <div class="col-4">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title mb-0 flex-grow-1">Navigasi Soal</h4>
+                                </div>
+                                <div class="card-body">
+                                    <section class="signup-step-container">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="wizard">
+                                                    <div class="wizard-inner">
+                                                        <ul class="nav nav-tabs" role="tablist">
+                                                            <li role="presentation" class="">
+                                                                <a href="#step1" data-toggle="tab" aria-controls="step1" role="tab" aria-expanded="true" class="" aria-selected="false"><span class="round-tab">1 </span> </a>
+                                                            </li>
+                                                            <li role="presentation" class="disabled">
+                                                                <a href="#step2" data-toggle="tab" aria-controls="step2" role="tab" aria-expanded="false" class="" aria-selected="false"><span class="round-tab">2 </span> </a>
+                                                            </li>
+                                                            <li role="presentation" class="disabled">
+                                                                <a href="#step3" data-toggle="tab" aria-controls="step3" role="tab" aria-expanded="false" class="" aria-selected="false"><span class="round-tab">3 </span> </a>
+                                                            </li>
+                                                            <li role="presentation" class="disabled active">
+                                                                <a href="#step4" data-toggle="tab" aria-controls="step4" role="tab" aria-expanded="false" class="active" aria-selected="true"><span class="round-tab">4 </span> </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-8">
+                            <div class="card">
+                                <div class="card-header align-items-center d-flex">
+                                    <h4 class="card-title mb-0 flex-grow-1">Lembar Soal</h4>
+                                    <span id="quest" class="badge badge-danger">Sisa Waktu <span class="sisawaktu" data-time="2022-07-29 01:59:00">15:46:36</span></span>
+                                </div>
+                                <div class="card-body">
+                                    <section class="signup-step-container">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="wizard">
+                                                    <form id="lembarUjian">
+                                                        <fieldset>
+                                                            <input type="hidden" id="id_ujian" name="id_ujian" value="5">
+                                                            <input type="hidden" id="id_hasil" name="id_hasil" value="6">
+                                                            <div class="tab-content" id="main_form">
+                                                                <div class="tab-pane" role="tabpanel" id="step1">
+                                                                    <input type="hidden" id="id_soal" name="id_soal[]" value="2">
+                                                                    <span class="badge badge-primary mb-3">Soal #1</span><br>
+
+                                                                    <p>Jaringan RT/RW-NET termasuk kedalam...</p>
+                                                                    <div class="funkyradio">
+                                                                        <div class="funkyradio-success">
+                                                                            <input type="radio" name="opsi[]1" id="opsi_a_1" value="A">
+                                                                            <label for="opsi_a_1">
+                                                 <div class="huruf_opsi">a</div> <p>PAN</p>                                             </label>
+                                                                        </div>
+                                                                        <div class="funkyradio-success">
+                                                                            <input type="radio" name="opsi[]1" id="opsi_b_1" value="B">
+                                                                            <label for="opsi_b_1">
+                                                 <div class="huruf_opsi">b</div> <p>LAN</p>                                             </label>
+                                                                        </div>
+                                                                        <div class="funkyradio-success">
+                                                                            <input type="radio" name="opsi[]1" id="opsi_c_1" value="C">
+                                                                            <label for="opsi_c_1">
+                                                 <div class="huruf_opsi">c</div> <p>MAN</p>                                             </label>
+                                                                        </div>
+                                                                        <div class="funkyradio-success">
+                                                                            <input type="radio" name="opsi[]1" id="opsi_d_1" value="D">
+                                                                            <label for="opsi_d_1">
+                                                 <div class="huruf_opsi">d</div> <p>WAN</p>                                             </label>
+                                                                        </div>
+                                                                        <div class="funkyradio-success">
+                                                                            <input type="radio" name="opsi[]1" id="opsi_e_1" value="E">
+                                                                            <label for="opsi_e_1">
+                                                 <div class="huruf_opsi">e</div> <p>CAN</p>                                             </label>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <ul class="list-inline pull-right ">
+                                                                        <li><button type="button" class="default-btn next-step">Selanjutnya</button></li>
+                                                                    </ul>
+                                                                </div>
+                                                                <div class="tab-pane" role="tabpanel" id="step2">
+                                                                    <input type="hidden" id="id_soal" name="id_soal[]" value="3">
+                                                                    <span class="badge badge-primary mb-3">Soal #2</span><br>
+
+                                                                    <p>Ada berapa lapisan yang di bentuk oleh Model OSI...</p>
+                                                                    <div class="funkyradio">
+                                                                        <div class="funkyradio-success">
+                                                                            <input type="radio" name="opsi[]2" id="opsi_a_2" value="A">
+                                                                            <label for="opsi_a_2">
+                                                 <div class="huruf_opsi">a</div> <p>9</p>                                             </label>
+                                                                        </div>
+                                                                        <div class="funkyradio-success">
+                                                                            <input type="radio" name="opsi[]2" id="opsi_b_2" value="B">
+                                                                            <label for="opsi_b_2">
+                                                 <div class="huruf_opsi">b</div> <p>5</p>                                             </label>
+                                                                        </div>
+                                                                        <div class="funkyradio-success">
+                                                                            <input type="radio" name="opsi[]2" id="opsi_c_2" value="C">
+                                                                            <label for="opsi_c_2">
+                                                 <div class="huruf_opsi">c</div> <p>7</p>                                             </label>
+                                                                        </div>
+                                                                        <div class="funkyradio-success">
+                                                                            <input type="radio" name="opsi[]2" id="opsi_d_2" value="D">
+                                                                            <label for="opsi_d_2">
+                                                 <div class="huruf_opsi">d</div> <p>4</p>                                             </label>
+                                                                        </div>
+                                                                        <div class="funkyradio-success">
+                                                                            <input type="radio" name="opsi[]2" id="opsi_e_2" value="E">
+                                                                            <label for="opsi_e_2">
+                                                 <div class="huruf_opsi">e</div> <p>1</p>                                             </label>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <ul class="list-inline pull-right d-flex">
+                                                                        <li class="mr-3"><button type="button" class="default-btn prev-step">Back</button></li>
+                                                                        <li><button type="button" class="default-btn next-step">Selanjutnya</button></li>
+                                                                    </ul>
+                                                                </div>
+                                                                <div class="tab-pane" role="tabpanel" id="step3">
+                                                                    <input type="hidden" id="id_soal" name="id_soal[]" value="4">
+                                                                    <span class="badge badge-primary mb-3">Soal #3</span><br>
+
+                                                                    <p>Lapisan yang bertanggung jawab atas keutuhan transmisi data adalah :</p>
+                                                                    <div class="funkyradio">
+                                                                        <div class="funkyradio-success">
+                                                                            <input type="radio" name="opsi[]3" id="opsi_a_3" value="A">
+                                                                            <label for="opsi_a_3">
+                                                 <div class="huruf_opsi">a</div> <p>Lapisan Presentation</p>                                             </label>
+                                                                        </div>
+                                                                        <div class="funkyradio-success">
+                                                                            <input type="radio" name="opsi[]3" id="opsi_b_3" value="B">
+                                                                            <label for="opsi_b_3">
+                                                 <div class="huruf_opsi">b</div> <p>Lapisan Transport</p>                                             </label>
+                                                                        </div>
+                                                                        <div class="funkyradio-success">
+                                                                            <input type="radio" name="opsi[]3" id="opsi_c_3" value="C">
+                                                                            <label for="opsi_c_3">
+                                                 <div class="huruf_opsi">c</div> <p>Lapisan Session<br></p>                                             </label>
+                                                                        </div>
+                                                                        <div class="funkyradio-success">
+                                                                            <input type="radio" name="opsi[]3" id="opsi_d_3" value="D">
+                                                                            <label for="opsi_d_3">
+                                                 <div class="huruf_opsi">d</div> <p>Lapisan Network<br></p>                                             </label>
+                                                                        </div>
+                                                                        <div class="funkyradio-success">
+                                                                            <input type="radio" name="opsi[]3" id="opsi_e_3" value="E">
+                                                                            <label for="opsi_e_3">
+                                                 <div class="huruf_opsi">e</div> <p>Lapisan Ozon<br></p>                                             </label>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <ul class="list-inline pull-right d-flex">
+                                                                        <li class="mr-3"><button type="button" class="default-btn prev-step">Back</button></li>
+                                                                        <li><button type="button" class="default-btn next-step">Selanjutnya</button></li>
+                                                                    </ul>
+                                                                </div>
+                                                                <div class="tab-pane active" role="tabpanel" id="step4">
+                                                                    <input type="hidden" id="id_soal" name="id_soal[]" value="1">
+                                                                    <span class="badge badge-primary mb-3">Soal #4</span><br>
+
+                                                                    <!-- <img class="img-soal mb-3" src="assets/upload/7694d0704aec32247fa342b08354f85b.png" width="" height="20px"> -->
+                                                                    <p>Jaringan untuk cloud</p>
+                                                                    <div class="funkyradio">
+                                                                        <div class="funkyradio-success">
+                                                                            <input type="radio" name="opsi[]4" id="opsi_a_4" value="A">
+                                                                            <label for="opsi_a_4">
+                                                 <div class="huruf_opsi">a</div> <p>PAN</p>                                             </label>
+                                                                        </div>
+                                                                        <div class="funkyradio-success">
+                                                                            <input type="radio" name="opsi[]4" id="opsi_b_4" value="B">
+                                                                            <label for="opsi_b_4">
+                                                 <div class="huruf_opsi">b</div> <p>LAN</p>                                             </label>
+                                                                        </div>
+                                                                        <div class="funkyradio-success">
+                                                                            <input type="radio" name="opsi[]4" id="opsi_c_4" value="C">
+                                                                            <label for="opsi_c_4">
+                                                 <div class="huruf_opsi">c</div> <p>MAN</p>                                             </label>
+                                                                        </div>
+                                                                        <div class="funkyradio-success">
+                                                                            <input type="radio" name="opsi[]4" id="opsi_d_4" value="D">
+                                                                            <label for="opsi_d_4">
+                                                 <div class="huruf_opsi">d</div> <p>WAN</p>                                             </label>
+                                                                        </div>
+                                                                        <div class="funkyradio-success">
+                                                                            <input type="radio" name="opsi[]4" id="opsi_e_4" value="E">
+                                                                            <label for="opsi_e_4">
+                                                 <div class="huruf_opsi">e</div> <p>Local</p>                                             </label>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <ul class="list-inline pull-right d-flex">
+                                                                        <li class="mr-3"><button type="button" class="default-btn prev-step">Back</button></li>
+                                                                        <li><button id="submit" class="default-btn next-step" type="submit" onclick="location.href = 'hasil-ujian.html';">Finish</button></li>
+                                                                    </ul>
+                                                                </div>
+                                                                <div class="clearfix"></div>
+                                                            </div>
+                                                        </fieldset>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <script type="text/javascript">
+                        window.onbeforeunload = function() {
+                            return "Jawaban anda akan terhapus atau tidak tersimpan jika meload atau keluar dari halaman ini!!!";
+                        };
+                    </script>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Footer Start -->
+        <!-- <footer id="ujian" class="footer mt-4">
+            <div class="container-fluid">
+                <div class="row mb-2">
+                    <div class="col-sm-6">
+                        Friday, 29 July 2022, <span class="live-clock">10:12:22</span>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="text-sm-end d-none d-sm-block">
+                            <script>
+                                document.write(new Date().getFullYear())
+                            </script>2022 © Aplikasi LMS
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer> -->
+        <!-- end Footer -->
+
+    </div>
+
+    <!-- Vendor js -->
+    <script src="assets/js/vendor.min.js"></script>
+
+    <!--Form Wizard-->
+    <script src="assets/libs/jquery-steps/jquery.steps.min.js"></script>
+    <!-- Validation init js-->
+    <script src="assets/js/pages/wizard-init.js"></script>
+
+    <!-- App js -->
+    <script src="assets/js/app.min.js"></script>
+
+    <script type="text/javascript">
+        let url = 'http://localhost/demo-lms/';
+    </script>
+    <script src="assets/js/app/sheet.js"></script>
+    <script src="assets/js/app/wizard.js"></script>
+
+    <script>
+    </script>
+
+
+
+</body>
+
+</html>
